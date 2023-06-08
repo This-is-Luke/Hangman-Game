@@ -1,6 +1,14 @@
 // Word.js
+/*
+This is the Word component, it is intended to display the word that the user
+is trying to guess.
+*/
 import React from 'react';
 import Styled from 'styled-components';
+
+/*
+the styled component below is used to style the Word component.
+*/
 
 const StyledWord = Styled.div`
   display: flex;
@@ -17,6 +25,12 @@ const StyledWord = Styled.div`
   .letter {
     margin-right: 10px;
 `; 
+
+/*
+Here we create the Word component.
+It displays the word that the user is trying to guess 
+as a series of underscores.
+*/
 
 const Word = ({ selectedWord, correctLetters }) => {
   return (

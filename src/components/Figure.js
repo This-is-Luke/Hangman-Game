@@ -1,5 +1,13 @@
+//firguere.js
+/*
+This is the Figure component, it is intended to display the hangman images.
+*/
 import React from 'react';
 import styled from 'styled-components';
+
+/*
+simple styled component to style the Figure component.
+*/
 
 const StyledFigure = styled.div`
   display: flex;
@@ -7,7 +15,13 @@ const StyledFigure = styled.div`
   margin-top: 20px;
   margin: 0 auto;
   width: 30rem;
+  height: 20rem;
 `;
+
+/*
+This uses environment variables to display the correct image based on the
+number of wrong letters that the user has guessed.
+*/
 
 const Figure = ({ wrongLettersCount }) => {
   const getImage = () => {
@@ -33,6 +47,7 @@ const Figure = ({ wrongLettersCount }) => {
     }
   };
 
+  // this returns the image based on the number of wrong letters that the user
   return (
     <StyledFigure className="figure-container">
       <img src={getImage()} alt="Hangman stage" />

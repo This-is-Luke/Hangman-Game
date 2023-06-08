@@ -4,8 +4,10 @@ import styled from 'styled-components';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
+// Styled component for the header container
 const StyledHeader = styled.div`
 	display: flex;
+	background-color: lightblue;
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 20px;
@@ -14,6 +16,7 @@ const StyledHeader = styled.div`
 	border-bottom: 1px solid #ccc;
 	width: 30rem;
 
+	// Styles for the restart button
 	.restart-button {
 		background-color: #f54242;
 		border: none;
@@ -24,6 +27,8 @@ const StyledHeader = styled.div`
 		margin-top: 10px;
 		padding: 10px 20px;
 	}
+
+	// Styles for the help button
 	.help-button {
 		background-color: #f54242;
 		border: none;
@@ -35,6 +40,9 @@ const StyledHeader = styled.div`
 		padding: 10px 20px;
 	}
 `;
+
+// HelpPopup component displays a popup with game rules and instructions.
+// It utilizes the reactjs-popup library.
 const HelpPopup = () => (
 	<Popup
 		trigger={<button className="help-button">Help</button>}
@@ -70,6 +78,8 @@ const HelpPopup = () => (
 	</Popup>
 );
 
+// Header component displays the main header, restart button, and help button.
+// The resetGame prop is a callback function passed from the parent component (App) to restart the game.
 const Header = ({ resetGame }) => (
 	<StyledHeader>
 		<h1>Hangman</h1>

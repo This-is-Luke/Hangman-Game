@@ -1,3 +1,19 @@
+Hangman Game Documentation
+
+Goal
+
+The goal of the Hangman game is for the player(s) to guess a secret word or phrase by suggesting letters one at a time. The game can be customized to make it easier or harder, and it can also be used for educational purposes, such as learning new vocabulary, improving spelling, and practicing pronunciation 
+
+Rules
+The App selects a secret word from a preditermained set of words. The word is represented by a set of dashes, with each dash representing a letter 
+The player take turns suggesting letters that might be in the secret word.
+If the suggested letter is in the secret word or phrase, it is revealed in its respective position on the dashed line.
+If the suggested letter is not in the secret word or phrase, a part of the hangman stick figure is drawn. The game continues until either the word is guessed correctly, or the entire hangman stick figure is drawn.
+
+This React app provides an interactive interface for the Hangman game. The app selects a secret word and the player guesses letters by clicking on them. The app keeps track of the player's progress and displays the hangman stick figure as the player makes incorrect guesses javascript.plainenglish.io.
+
+Below is the basic use of the react ap and how to start it on your end should youi want to play it.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

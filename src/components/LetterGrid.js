@@ -1,16 +1,28 @@
+//lettergrid.js
+/*
+This is the LetterGrid component, it is intended to display a grid of letters
+that the user can click on to guess the word.
+*/
 import React from 'react';
 import styled from 'styled-components';
 
+/*
+The styled components below are used to style the LetterGrid component.
+*/
+
 const LetterGridWrapper = styled.div`
   display: grid;
+  background-color: #919191;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 10px;
   margin: 0 auto;
   width: 30rem;
-  margin-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 20px;
+  border-radius: 2rem;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
 `;
 
 const LetterButton = styled.button`
@@ -23,6 +35,11 @@ const LetterButton = styled.button`
     background-color: #e0e0e0;
   }
 `;
+
+/*
+This function is used to create the LetterGrid component.
+It sets up a grid of letters that the user can click on to guess the word.
+*/
 
 const LetterGrid = ({ onClickLetter }) => {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
